@@ -1,0 +1,101 @@
+name,height,weight,types,hp
+bulbasaur,7,69,"grass, poison",45
+ivysaur,10,130,"grass, poison",60
+venusaur,20,1000,"grass, poison",80
+charmander,6,85,fire,39
+charmeleon,11,190,fire,58
+charizard,17,905,"fire, flying",78
+squirtle,5,90,water,44
+wartortle,10,225,water,59
+blastoise,16,855,water,79
+caterpie,3,29,bug,45
+metapod,7,99,bug,50
+butterfree,11,320,"bug, flying",60
+weedle,3,32,"bug, poison",40
+kakuna,6,100,"bug, poison",45
+beedrill,10,295,"bug, poison",65
+pidgey,3,18,"normal, flying",40
+pidgeotto,11,300,"normal, flying",63
+pidgeot,15,395,"normal, flying",83
+rattata,3,35,normal,30
+raticate,7,185,normal,55
+spearow,3,20,"normal, flying",40
+fearow,12,380,"normal, flying",65
+ekans,20,69,poison,35
+arbok,35,650,poison,60
+pikachu,4,60,electric,35
+raichu,8,300,electric,60
+sandshrew,6,120,ground,50
+sandslash,10,295,ground,75
+nidoran-f,4,70,poison,55
+nidorina,8,200,poison,70
+nidoqueen,13,600,"poison, ground",90
+nidoran-m,5,90,poison,46
+nidorino,9,195,poison,61
+nidoking,14,620,"poison, ground",81
+clefairy,6,75,fairy,70
+clefable,13,400,fairy,95
+vulpix,6,99,fire,38
+ninetales,11,199,fire,73
+jigglypuff,5,55,"normal, fairy",115
+wigglytuff,10,120,"normal, fairy",140
+zubat,8,75,"poison, flying",40
+golbat,16,550,"poison, flying",75
+oddish,5,54,"grass, poison",45
+gloom,8,86,"grass, poison",60
+vileplume,12,186,"grass, poison",75
+paras,3,54,"bug, grass",35
+parasect,10,295,"bug, grass",60
+venonat,10,300,"bug, poison",60
+venomoth,15,125,"bug, poison",70
+diglett,2,8,ground,10
+dugtrio,7,333,ground,35
+meowth,4,42,normal,40
+persian,10,320,normal,65
+psyduck,8,196,water,50
+golduck,17,766,water,80
+mankey,5,280,fighting,40
+primeape,10,320,fighting,65
+growlithe,7,190,fire,55
+arcanine,19,1550,fire,90
+poliwag,6,124,water,40
+poliwhirl,10,200,water,65
+poliwrath,13,540,"water, fighting",90
+abra,9,195,psychic,25
+kadabra,13,565,psychic,40
+alakazam,15,480,psychic,55
+machop,8,195,fighting,70
+machoke,15,705,fighting,80
+machamp,16,1300,fighting,90
+bellsprout,7,40,"grass, poison",50
+weepinbell,10,64,"grass, poison",65
+victreebel,17,155,"grass, poison",80
+tentacool,9,455,"water, poison",40
+tentacruel,16,550,"water, poison",80
+geodude,4,200,"rock, ground",40
+graveler,10,1050,"rock, ground",55
+golem,14,3000,"rock, ground",80
+ponyta,10,300,fire,50
+rapidash,17,950,fire,65
+slowpoke,12,360,"water, psychic",90
+slowbro,16,785,"water, psychic",95
+magnemite,3,60,"electric, steel",25
+magneton,10,600,"electric, steel",50
+farfetchd,8,150,"normal, flying",52
+doduo,14,392,"normal, flying",35
+dodrio,18,852,"normal, flying",60
+seel,11,900,water,65
+dewgong,17,1200,"water, ice",90
+grimer,9,300,poison,80
+muk,12,300,poison,105
+shellder,3,40,water,30
+cloyster,15,1325,"water, ice",50
+gastly,13,1,"ghost, poison",30
+haunter,16,1,"ghost, poison",45
+gengar,15,405,"ghost, poison",60
+onix,88,2100,"rock, ground",35
+drowzee,10,324,psychic,60
+hypno,16,756,psychic,85
+krabby,4,65,water,30
+kingler,13,600,water,55
+voltorb,5,104,electric,40
