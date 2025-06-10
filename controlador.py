@@ -11,9 +11,11 @@ from analisis import vista_analisis
 
 
 def main(page: ft.Page):
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    icon_path = os.path.join(base_path, "iconos/pokeball.ico")
+    page.window.icon = icon_path
     page.title = "Pokémon App"
     page.theme_mode = ft.ThemeMode.LIGHT
-
     tabs = ft.Tabs(
         selected_index=0,
         animation_duration=300,
@@ -23,9 +25,7 @@ def main(page: ft.Page):
         ],
         expand=1
     )
-
     page.add(tabs)
-
 
 if __name__ == "__main__":
     ft.app(target=main)
