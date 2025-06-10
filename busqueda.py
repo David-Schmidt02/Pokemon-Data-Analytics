@@ -16,7 +16,6 @@ def obtener_nombres_pokemon():
     return []
 
 
-
 def vista_busqueda():
     lista_nombres = obtener_nombres_pokemon()
     base_path = os.path.dirname(os.path.abspath(__file__))
@@ -92,7 +91,9 @@ def vista_busqueda():
             return [
                 ft.Container(
                     content=ft.Text(formatear(item), color=color_text),
-                    bgcolor=color_fondo, border_radius=10, padding=8, margin=4
+                    bgcolor=color_fondo, border_radius=10, padding=8, margin=4,
+                    col={"xs": 12, "sm": 12, "md": 6, "lg": 4},
+                    width=100, 
                 )
                 for item in lista
             ]
@@ -124,14 +125,16 @@ def vista_busqueda():
         nombre_texto = ft.Text(f"Nombre: {data['name'].capitalize()}", size=22, weight="bold", color="#FFD369")
         tipos_texto = ft.Text(f"Tipos: {', '.join(tipos).capitalize()}", color="white")
 
-        seccion_izquierda = ft.Column([carrusel, img_principal], alignment="center", horizontal_alignment="center")
+        seccion_izquierda = ft.Column([carrusel, img_principal], alignment="center", horizontal_alignment="center", expand=True)
         seccion_derecha = ft.Column([
             nombre_texto, tipos_texto,
             ft.Text("Habilidades:", size=16, weight="bold", color="#FFD369"),
-            ft.Row(habilidades_cards, wrap=True, spacing=5),
+            ft.ResponsiveRow(habilidades_cards, spacing=5),
+            #ft.Row(habilidades_cards, wrap=True, spacing=5),
             ft.Text("Estadísticas:", size=16, weight="bold", color="#FFD369"),
-            ft.Row(stats_cards, wrap=True, spacing=5),
-        ], spacing=10)
+            ft.ResponsiveRow(stats_cards, spacing=5)
+            #ft.Row(stats_cards, wrap=True, spacing=5),
+        ], spacing=10, expand=True)
 
         ficha_pokemon = ft.Container(
             content=ft.Row([seccion_izquierda, seccion_derecha], spacing=30),
@@ -152,7 +155,7 @@ def vista_busqueda():
             encabezado,
             sugerencias,
             resultado
-        ], spacing=10),
+        ], spacing=10, scroll="auto"),
         bgcolor="#222831",
         padding=30,
         margin=ft.Margin(0, 15, 0, 0),
