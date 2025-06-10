@@ -34,7 +34,6 @@ def crear_radar(valores, etiquetas, nombre_pokemon):
     plt.close()
     return img_path
 
-
 def vista_busqueda():
     lista_nombres = obtener_nombres_pokemon()
 
@@ -73,19 +72,50 @@ def vista_busqueda():
         sprite_url = data["sprites"]["other"]["official-artwork"]["front_default"]
         tipos = [t["type"]["name"] for t in data["types"]]
 
+        # Colores por tipo (puedes agregar más)
+        colores_tipo = {
+            "fire": "#F08030", "water": "#6890F0", "grass": "#78C850", "electric": "#F8D030",
+            "psychic": "#F85888", "ice": "#98D8D8", "dragon": "#7038F8", "dark": "#705848",
+            "fairy": "#EE99AC", "normal": "#A8A878", "fighting": "#C03028", "flying": "#A890F0",
+            "poison": "#A040A0", "ground": "#E0C068", "rock": "#B8A038", "bug": "#A8B820",
+            "ghost": "#705898", "steel": "#B8B8D0"
+        }
+        color_fondo = colores_tipo.get(tipos[0], "#CCCCCC")
+
+        # Habilidades
+        habilidades = [h["ability"]["name"] for h in data["abilities"]]
+        habilidades_cards = [
+            ft.Container(
+                content=ft.Text(hab.capitalize(), color="white"),
+                bgcolor=color_fondo, border_radius=10, padding=8, margin=4
+            ) for hab in habilidades
+        ]
+
+        # Estadísticas
         etiquetas = []
         valores = []
+        stats_cards = []
         for stat in data["stats"]:
             etiquetas.append(stat["stat"]["name"])
             valores.append(stat["base_stat"])
+            stats_cards.append(
+                ft.Container(
+                    content=ft.Text(f"{stat['stat']['name'].capitalize()}: {stat['base_stat']}", color="white"),
+                    bgcolor=color_fondo, border_radius=10, padding=8, margin=4
+                )
+            )
 
-        grafico = crear_radar(valores, etiquetas, nombre)
+        #grafico = crear_radar(valores, etiquetas, nombre)
 
         resultado.controls = [
             ft.Image(src=sprite_url, width=200, height=200),
             ft.Text(f"Nombre: {data['name'].capitalize()}", size=20, weight="bold"),
             ft.Text(f"Tipos: {', '.join(tipos).capitalize()}"),
-            ft.Image(src=grafico, width=300, height=300),
+            ft.Text("Habilidades:", size=16, weight="bold"),
+            ft.Row(habilidades_cards, wrap=True),
+            ft.Text("Estadísticas:", size=16, weight="bold"),
+            ft.Row(stats_cards, wrap=True),
+            # ft.Image(src=grafico, width=300, height=300),
         ]
         sugerencias.controls = []
         input_busqueda.value = ""
