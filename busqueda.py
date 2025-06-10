@@ -5,6 +5,7 @@ import requests
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+from colores_tipo import colores_tipo, tipos_claros
 
 def obtener_nombres_pokemon():
     url = "https://pokeapi.co/api/v2/pokemon?limit=100000"
@@ -85,15 +86,6 @@ def vista_busqueda():
             carrusel = ft.Text("No hay sprites adicionales.")
 
         tipos = [t["type"]["name"] for t in data["types"]]
-
-        colores_tipo = {
-            "fire": "#F08030", "water": "#6890F0", "grass": "#78C850", "electric": "#F8D030",
-            "psychic": "#F85888", "ice": "#98D8D8", "dragon": "#7038F8", "dark": "#705848",
-            "fairy": "#EE99AC", "normal": "#A8A878", "fighting": "#C03028", "flying": "#A890F0",
-            "poison": "#A040A0", "ground": "#E0C068", "rock": "#B8A038", "bug": "#A8B820",
-            "ghost": "#705898", "steel": "#B8B8D0",
-        }
-        tipos_claros = ["electric", "fairy", "ice", "normal", "ground", "rock", "bug", "steel"]
         color_text = "#222831" if tipos[0] in tipos_claros else "white"
         color_fondo = colores_tipo.get(tipos[0], "#CCCCCC")
 
