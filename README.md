@@ -10,7 +10,6 @@ Esta aplicación permite **buscar Pokémon**, ver sus **detalles** y próximamen
 - **Flet** 🖥️ – Framework para crear interfaces gráficas multiplataforma con Python.  
 - **Requests** 🌐 – Para consumir la API REST de PokeAPI.  
 - **Pandas** 📊 – Para análisis y manipulación de datos tabulares.  
-- **Matplotlib** 📈 – Para generar visualizaciones gráficas.  
 - **NumPy** 🔢 – Para realizar operaciones numéricas eficientes.  
 - **PokeAPI** 🐾 – Fuente de datos oficial de Pokémon.
 
